@@ -1,0 +1,13 @@
+<resources>
+    <!-- Light Theme Colors -->
+     Add this -->
+    <color name="textColorNav">#D9D9D9</color>
+    <!-- Dark Theme Colors -->
+    <color name="primaryColor">#000000</color>
+    <color name="onPrimaryColor">#000000</color>
+
+
+
+    <color name="textColorPrimary">#FFFFFF</color> <!-- 👈 Add this -->
+     <!-- 👈 Add this -->
+</resources>

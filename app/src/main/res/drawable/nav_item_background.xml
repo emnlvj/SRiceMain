@@ -1,0 +1,23 @@
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetBottom="8dp"> <!-- Simulates margin bottom -->
+
+    <layer-list>
+
+        <!-- Full-width transparent layer to preserve click area -->
+        <item>
+            <shape android:shape="rectangle">
+                <solid android:color="@android:color/transparent" />
+            </shape>
+        </item>
+
+        <!-- Visible background limited in width using left/right padding -->
+        <item android:left="16dp" android:right="80dp"> <!-- Adjust right to change width -->
+            <shape android:shape="rectangle">
+                <solid android:color="#CC4A9D5C" />
+                <corners android:radius="12dp" />
+            </shape>
+        </item>
+
+    </layer-list>
+
+</inset>

@@ -1,0 +1,27 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/titleWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome, Users"
+        android:textColor="#4A9D5C"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/messageWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We're here to revolutionize your rice farming journey. With SRice, you'll gain powerful tools to boost your yield, improve decision-making, and secure your future."
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:lineSpacingExtra="4dp" />
+
+</LinearLayout>
