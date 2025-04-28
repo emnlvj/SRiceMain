@@ -1,10 +1,32 @@
 <resources>
     <!-- Light Theme Colors -->
-    <color name="primaryColor">#FFFFFF</color>
+    <color name="primaryColor">#4A9D5C</color>
     <color name="onPrimaryColor">#FFFFFF</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_green">#136328</color>
+    <color name="light_gray">#F0F0F0</color>
+    <color name="dark_gray">#444444</color>
+    <color name="green_rounded_button">#4CAF50 </color>
+    <color name="light_gray_border">#DDDDDD</color>
+    <color name="green_4caf50">#4CAF50</color>
+    <color name="teal_light">#E0F2F1</color>
+    <color name="secondaryColor">#388E3C</color>
+    <color name="onSecondaryColor">#FFFFFF</color>
 
+    <!-- Background / surfaces -->
+    <color name="backgroundColor">#F5F5F5</color>
+    <color name="surfaceColor">#FFFFFF</color>
+    <color name="onSurfaceColor">#000000</color>
 
-
+    <!-- Text roles -->
+    <color name="textPrimaryColor">#FFFFFF</color>
+    <color name="textSecondaryColor">#757575</color>
     <color name="textColorPrimary">#FFFFFF</color> <!-- 👈 Add this -->
      <!-- 👈 Add this -->
     <color name="textColorNav">#FFFFFF</color>

@@ -24,6 +24,12 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".LoginSignup"
+            android:label="Login/Signup"
+            android:theme="@style/Theme.MyApp"
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>

@@ -1,4 +1,5 @@
 package com.example.sricedemo
+import android.content.Intent
 import androidx.viewpager2.widget.MarginPageTransformer
 import android.content.res.Configuration
 import androidx.viewpager2.widget.CompositePageTransformer
@@ -12,6 +13,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -76,6 +78,7 @@ class MainActivity : AppCompatActivity() {
         tabLayout = findViewById(R.id.tabIndicator)
         slideHandler = Handler(Looper.getMainLooper())
 
+        
         setupSlideCarousel()
         applySlideIndicator()
         applyNavDrawerBackground()
@@ -164,7 +167,7 @@ class MainActivity : AppCompatActivity() {
 
         val background = LayerDrawable(
             arrayOf(
-                ColorDrawable(Color.parseColor(if (isDark) "#000000" else "#D9D9D9")),
+                ColorDrawable(Color.parseColor(if (isDark) "#000000" else "#FFFFFF")),
                 if (isDark) StickerScatterDrawableWhite(this) else StickerScatterDrawable(this)
             )
         )
@@ -200,6 +203,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_toggle_theme -> {
+                // Toggle theme
                 isDarkMode = !isDarkMode
                 getSharedPreferences("ThemePrefs", MODE_PRIVATE)
                     .edit()
@@ -214,17 +218,20 @@ class MainActivity : AppCompatActivity() {
                 true
             }
 
-            R.id.action_login -> {
-                Toast.makeText(this, "Login clicked", Toast.LENGTH_SHORT).show()
-                true
-            }
 
-            R.id.action_signup -> {
-                Toast.makeText(this, "Sign Up clicked", Toast.LENGTH_SHORT).show()
+            R.id.action_login -> {
+                if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                }
+
+                val intent = Intent(this, LoginSignup::class.java)
+                startActivity(intent)
                 true
             }
 
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+
 }

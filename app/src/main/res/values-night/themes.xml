@@ -5,7 +5,17 @@
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorTertiary">@color/textColorNav</item>
         <item name="colorOnPrimary">@color/onPrimaryColor</item>
+        <!-- Primary brand color. -->
 
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+
+        <!-- Customize your theme here. -->
 
         <item name="android:textColorPrimary">@color/textColorPrimary</item> <!-- 👈 -->
          <!-- 👈 -->
