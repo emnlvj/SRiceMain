@@ -55,7 +55,7 @@ dependencies {
     implementation(libs.exoplayer)
     // Material3
     implementation(libs.androidx.material3)             // androidx.compose.material3
-    implementation(libs.material.components)
+
     // AppCompat
     implementation(libs.androidx.appcompat)             // androidx.appcompat
 

@@ -5,19 +5,15 @@
     <item
         android:id="@+id/action_toggle_theme"
         android:title="Toggle Theme"
-        android:icon="@android:drawable/ic_menu_day"
+        android:icon="@drawable/ic_menu_day"
         app:showAsAction="always"
         tools:ignore="AppCompatResource" />
 
     <item
         android:id="@+id/action_login"
-        android:title="Login"
+        android:title="Join Us Today"
         app:showAsAction="always"
         tools:ignore="AppCompatResource" />
 
-    <item
-        android:id="@+id/action_signup"
-        android:title="Sign Up"
-        app:showAsAction="always"
-        tools:ignore="AppCompatResource" />
+
 </menu>

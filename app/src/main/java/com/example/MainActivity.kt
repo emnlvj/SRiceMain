@@ -1,30 +1,35 @@
-package com.example.sricedemo
+package com.example
 import android.content.Intent
 import androidx.viewpager2.widget.MarginPageTransformer
 import android.content.res.Configuration
 import androidx.viewpager2.widget.CompositePageTransformer
 import android.graphics.Color
+import android.graphics.Typeface
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.LayerDrawable
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.AbsoluteSizeSpan
+import android.text.style.ForegroundColorSpan
+import android.text.style.StyleSpan
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
-import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.GravityCompat
-import androidx.core.widget.NestedScrollView
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.example.sricedemo.R
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -69,11 +74,45 @@ class MainActivity : AppCompatActivity() {
         )
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        window.decorView.systemUiVisibility =
+            View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY or
+                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE or
+                    View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or
+                    View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or
+                    View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                    View.SYSTEM_UI_FLAG_FULLSCREEN
         // Make sure toolbar is initialized BEFORE using it
         drawerLayout = findViewById(R.id.drawerLayout)
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
+
+        // Remove default title
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        // Get the ImageView and TextView from the toolbar
+        val logoImageView: ImageView = findViewById(R.id.logoImage)
+        val titleTextView: TextView = findViewById(R.id.toolbar_title)
+
+        // Set your logo image (you can dynamically change it if needed)
+        logoImageView.setImageResource(R.drawable.rice_logo)  // replace with your logo resource
+
+        // Create a SpannableString to style parts of the title
+        val titleText = "S Rice"
+        val spannableTitle = SpannableString(titleText)
+
+        // Apply green color to the "S"
+        spannableTitle.setSpan(ForegroundColorSpan(Color.parseColor("#4A9D5C")), 0, 1, 0)
+
+        // Apply black color to "Rice"
+        spannableTitle.setSpan(ForegroundColorSpan(Color.BLACK), 2, titleText.length, 0)
+
+        // Apply bold style to the entire title
+        val typeface = ResourcesCompat.getFont(this, R.font.montserrat_bold)
+        spannableTitle.setSpan(StyleSpan(android.graphics.Typeface.BOLD), 0, titleText.length, 0)
+
+        // Set the styled title text to the TextView
+        titleTextView.text = spannableTitle
+
         viewPagers = findViewById(R.id.viewPagers)
         tabLayout = findViewById(R.id.tabIndicator)
         slideHandler = Handler(Looper.getMainLooper())
@@ -197,6 +236,21 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.nav_menu, menu)
+
+        // Customize the "Join Us Today" menu item
+        val loginMenuItem = menu?.findItem(R.id.action_login)
+        loginMenuItem?.setActionView(R.layout.custom_menu_button)
+
+        // Set click listener on the custom view
+        val customButton = loginMenuItem?.actionView
+        customButton?.setOnClickListener {
+            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                drawerLayout.closeDrawer(GravityCompat.START)
+            }
+            val intent = Intent(this, LoginSignup::class.java)
+            startActivity(intent)
+        }
+
         return true
     }
 
@@ -232,6 +286,8 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+
 
 
 }

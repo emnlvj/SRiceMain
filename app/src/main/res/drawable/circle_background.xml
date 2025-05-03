@@ -2,4 +2,7 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="oval">
     <solid android:color="@android:color/white" />
+    <stroke
+        android:color="#804A9D5C"
+    android:width="2dp" />    <!-- Border width -->
 </shape>

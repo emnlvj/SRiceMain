@@ -1,8 +1,9 @@
-package com.example.sricedemo
+package com.example
 
 import android.content.Context
 import android.graphics.*
 import android.graphics.drawable.Drawable
+import com.example.sricedemo.R
 
 class StickerScatterDrawableWhite(private val context: Context) : Drawable() {
 

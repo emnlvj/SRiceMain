@@ -1,10 +1,11 @@
-package com.example.sricedemo
+package com.example
 
 import android.os.Bundle
 import android.view.Gravity
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.sricedemo.R
 
 class HomePage : AppCompatActivity() {
 

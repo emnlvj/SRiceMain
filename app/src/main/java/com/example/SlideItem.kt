@@ -1,4 +1,4 @@
-package com.example.sricedemo
+package com.example
 
 data class SlideItem(
     val title: String,

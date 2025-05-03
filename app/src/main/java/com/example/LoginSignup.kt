@@ -1,5 +1,6 @@
-package com.example.sricedemo
+package com.example
 
+import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -11,15 +12,29 @@ import android.widget.ImageButton
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.example.sricedemo.R
 
 class LoginSignup : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_signup)
+        window.decorView.systemUiVisibility =
+            View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY or
+                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE or
+                    View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or
+                    View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or
+                    View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                    View.SYSTEM_UI_FLAG_FULLSCREEN
         val backButton: ImageButton = findViewById(R.id.btnBack)
+        val loginButtonTransfer = findViewById<Button>(R.id.loginButtonTransfer)
         backButton.setOnClickListener {
             onBackPressed() // This will take the user back to the previous screen
+        }
+        loginButtonTransfer.setOnClickListener {
+            val intent = Intent(this, Dashboard::class.java)
+            startActivity(intent)
+            finish() // optional: so user can’t go back to login
         }
         setupLoginSignupToggle()
         applyCardBackground()
@@ -52,8 +67,12 @@ class LoginSignup : AppCompatActivity() {
                 .setDuration(300)
                 .start()
 
-            loginButton.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.green_4caf50))
-            signupButton.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.teal_light))
+            loginButton.setBackgroundTintList(ContextCompat.getColorStateList(this,
+                R.color.green_4caf50
+            ))
+            signupButton.setBackgroundTintList(ContextCompat.getColorStateList(this,
+                R.color.teal_light
+            ))
 
             loginButton.setTextColor(Color.WHITE)
             signupButton.setTextColor(ContextCompat.getColor(this, R.color.green_4caf50))
@@ -80,8 +99,12 @@ class LoginSignup : AppCompatActivity() {
                 .setDuration(300)
                 .start()
 
-            signupButton.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.green_4caf50))
-            loginButton.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.teal_light))
+            signupButton.setBackgroundTintList(ContextCompat.getColorStateList(this,
+                R.color.green_4caf50
+            ))
+            loginButton.setBackgroundTintList(ContextCompat.getColorStateList(this,
+                R.color.teal_light
+            ))
 
             signupButton.setTextColor(Color.WHITE)
             loginButton.setTextColor(ContextCompat.getColor(this, R.color.green_4caf50))

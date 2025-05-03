@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6FFF1"
+    tools:context="com.example.Dashboard">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollViewdash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:padding="16dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#000000"
+            android:backgroundTint="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Top Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="8dp"
+                    android:layout_margin="20dp">
+
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_menu" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome back, John"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:paddingTop="8dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Let's check on your rice fields today"
+                    android:textSize="14sp"
+                    android:textColor="#888888"
+                    android:paddingBottom="12dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <!-- Small Card: Field Status -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp" android:backgroundTint="@color/white"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp">
+
+                    <include
+                        layout="@layout/fieldstatus_card" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Small Card: Weather -->
+                <include layout="@layout/weather_cardview" />
+
+                <!-- Tab Filter -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_tab_container"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="Task"
+                        android:gravity="center"
+                        android:textColor="#333333"
+                        android:textStyle="bold"
+                        android:background="@drawable/bg_tab_selected"
+                        android:paddingHorizontal="20dp"
+                        android:layout_marginEnd="6dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="Notifications"
+                        android:gravity="center"
+                        android:textColor="#333333"
+                        android:background="@drawable/bg_tab_unselected"
+                        android:paddingHorizontal="20dp"
+                        android:layout_marginEnd="6dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="Insights"
+                        android:gravity="center"
+                        android:textColor="#333333"
+                        android:background="@drawable/bg_tab_unselected"
+                        android:paddingHorizontal="20dp" />
+                </LinearLayout>
+
+                <!-- Section Titles -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today's Tasks"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#222"
+                    android:paddingBottom="6dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tasks that need your attention"
+                    android:textSize="14sp"
+                    android:textColor="#888888"
+                    android:paddingBottom="12dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <!-- Small Card: Task List -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    app:cardCornerRadius="16dp"
+                    android:layout_margin="16dp"
+                    app:cardElevation="4dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/taskRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:clipToPadding="false"
+                        android:orientation="horizontal" />
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabCenterdash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="90dp"
+        android:src="@drawable/ic_nav_box"
+        app:iconTint="@color/white"
+        android:backgroundTint="#00C853"
+        app:elevation="6dp" />
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationdash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#FFFFFF"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="#4A9D5C"
+        app:itemTextColor="@color/black" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
