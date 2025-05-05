@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "904717593220",
+    "project_id": "sricecapstone",
+    "storage_bucket": "sricecapstone.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:904717593220:android:53f6cd56153920301230d1",
+        "android_client_info": {
+          "package_name": "com.srice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "904717593220-m9h4eh7e6kq29a7r4nah1le8h1t1vntb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.srice",
+            "certificate_hash": "92206bb1e24708851cd1350af8d0d7404dad597b"
+          }
+        },
+        {
+          "client_id": "904717593220-ohmar353l5hashf7srqach4pviqv89kt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQGCgQqZBM8-d2oQ_nG2veLwHmIfO58H4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "904717593220-ohmar353l5hashf7srqach4pviqv89kt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

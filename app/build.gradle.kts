@@ -2,14 +2,15 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.google.services)
 }
 
 android {
-    namespace = "com.example.sricedemo"
+    namespace = "com.srice"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.sricedemo"
+        applicationId = "com.srice"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -40,6 +41,19 @@ android {
 }
 
 dependencies {
+    //facebook auth
+
+    implementation(libs.facebook.android.sdk) // Use latest
+
+
+    //google auth
+    implementation(libs.firebase.auth.ktx)
+    implementation(libs.play.services.auth)
+    //database
+    implementation(libs.retrofit)
+    implementation(libs.gsonConverter)
+    implementation(libs.loggingInterceptor)
+
     implementation(libs.viewpager2)
     implementation(libs.material)
     // Core Libraries

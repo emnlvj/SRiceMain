@@ -1,18 +1,18 @@
-package com.example
+package com.srice
 
 import android.content.Context
 import android.graphics.*
 import android.graphics.drawable.Drawable
-import com.example.sricedemo.R
+import com.srice.R
 
-class StickerScatterDrawable(private val context: Context) : Drawable() {
+class StickerScatterDrawableWhite(private val context: Context) : Drawable() {
 
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
 
     private val stickers = listOf(
-        BitmapFactory.decodeResource(context.resources, R.drawable.person),
-        BitmapFactory.decodeResource(context.resources, R.drawable.shovels),
-        BitmapFactory.decodeResource(context.resources, R.drawable.weed)
+        BitmapFactory.decodeResource(context.resources, R.drawable.personwhite),
+        BitmapFactory.decodeResource(context.resources, R.drawable.shovelswhite),
+        BitmapFactory.decodeResource(context.resources, R.drawable.weedwhite)
     )
 
     private data class StickerPlacement(

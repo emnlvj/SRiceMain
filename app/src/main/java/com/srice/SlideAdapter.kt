@@ -1,4 +1,4 @@
-package com.example
+package com.srice
 
 import android.net.Uri
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.ui.PlayerView
 import android.content.Context
-import com.example.sricedemo.R
+import com.srice.R
 
 class SlideAdapter(private val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 

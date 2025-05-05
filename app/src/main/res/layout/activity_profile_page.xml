@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E6FFF1"
-    tools:context="com.example.ProfilePage">
+    tools:context="com.srice.ProfilePage">
 
 
     <androidx.core.widget.NestedScrollView

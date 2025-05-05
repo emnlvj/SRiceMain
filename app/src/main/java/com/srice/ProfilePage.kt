@@ -1,4 +1,4 @@
-package com.example
+package com.srice
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.ViewAnimator
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.NestedScrollView
-import com.example.sricedemo.R
+import com.srice.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 

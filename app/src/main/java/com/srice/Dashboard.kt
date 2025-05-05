@@ -1,4 +1,4 @@
-package com.example
+package com.srice
 
 import android.content.Intent
 import android.graphics.Rect
@@ -9,7 +9,7 @@ import androidx.core.widget.NestedScrollView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
-import com.example.sricedemo.R
+import com.srice.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 

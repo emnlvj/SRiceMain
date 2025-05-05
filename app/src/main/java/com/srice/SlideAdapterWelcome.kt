@@ -1,11 +1,11 @@
-package com.example
+package com.srice
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.sricedemo.R
+import com.srice.R
 
 class SlideAdapterWelcome(private val items: List<SlideItem>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 

@@ -2,5 +2,11 @@
     <string name="app_name">SRiceDemo</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="default_web_client_id">904717593220-ohmar353l5hashf7srqach4pviqv89kt.apps.googleusercontent.com</string>
+
+    <string name="facebook_app_id">1406480963842582</string>
+    <string name="fb_login_protocol_scheme">fb1406480963842582</string>
+    <string name="facebook_client_token">1406480963842582|khl6BNCw41cSHIWYjfNESMwTveI</string>
+
 
 </resources>

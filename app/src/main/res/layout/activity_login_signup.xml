@@ -188,6 +188,7 @@
                         android:layout_marginBottom="8dp">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fullNameEditText"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Full Name" />
@@ -199,6 +200,7 @@
                         android:layout_marginBottom="8dp">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/emailEditText"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Email Address"
@@ -211,9 +213,10 @@
                         android:layout_marginBottom="16dp">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/phoneEditText"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="63+"
+                            android:hint="63+ |"
                              />
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -223,6 +226,7 @@
                         android:layout_marginBottom="16dp">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/passwordEditText"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Password"
@@ -235,6 +239,7 @@
                         android:layout_marginBottom="16dp">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/confirmPassword"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Confirm Password"
@@ -263,7 +268,7 @@
                     </LinearLayout>
 
                     <com.google.android.material.button.MaterialButton
-
+                        android:id="@+id/signupButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Sign Up" />

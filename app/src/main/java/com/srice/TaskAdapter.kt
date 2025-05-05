@@ -1,4 +1,4 @@
-package com.example
+package com.srice
 
 import android.content.Context
 import android.view.LayoutInflater

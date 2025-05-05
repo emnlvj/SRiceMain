@@ -1,4 +1,4 @@
-package com.example.sricedemo
+package com.srice.sricedemo
 
 import org.junit.Test
 
